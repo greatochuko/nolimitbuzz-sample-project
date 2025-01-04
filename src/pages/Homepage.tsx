@@ -6,7 +6,6 @@ export type UserType = {
   id: number;
   name: string;
   email: string;
-  birthDate: string;
   phone: string;
   website: string;
   company: { name: string };

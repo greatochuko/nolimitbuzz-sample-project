@@ -9,8 +9,6 @@ export default function UserDetailsPage() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<UserType | null>(null);
 
-  console.log(user);
-
   useEffect(() => {
     async function fetchUser() {
       setLoading(true);

@@ -1,8 +1,83 @@
-.homepage {
+.user-list-container {
+  font-size: 14px;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.user-list-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-list-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.user-list-header input {
+  border-radius: 0.5rem;
+  border: solid 1px #ddd;
+  background-color: #ececec;
+  padding: 0.5rem 1rem;
+  width: 160px;
+}
+
+.user-list-header input:focus-visible {
+  outline: none;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dedede;
+}
+
+.user-list-item {
+  display: flex;
   align-items: center;
-  padding: 20px 80px;
-  max-width: 1024px;
-  margin: 0 auto;
+  padding: 0.5rem;
+  border-top: 1px solid #dedede;
+}
+
+.user-list-item-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  margin-right: auto;
+  margin-left: 0.75rem;
+}
+
+.user-list-item-content span {
+  color: #666;
+  font-weight: normal;
+}
+
+.user-list-item a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #ececec;
+  border: solid 1px #e5e5e5;
+  transition-duration: 200ms;
+  font-weight: 500;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.user-list-item a:hover {
+  background-color: #e5e5e5;
+}
+
+@media screen and (max-width: 640px) {
+  .user-list-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .user-list-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
 }

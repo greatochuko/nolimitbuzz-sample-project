@@ -24,7 +24,14 @@ export default function AppLayout() {
           </ul>
         </nav>
       </header>
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
+      <footer>
+        <p>
+          made with <span>❤</span> by Great
+        </p>
+      </footer>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-container h1 {
+  font-size: 1.75rem;
+}
+
+.about-container h2 {
+  font-size: 1.25rem;
+}
+
+.about-container p,
+.about-container li {
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.about-container li {
+  list-style: disc;
+  list-style-position: inside;
+}

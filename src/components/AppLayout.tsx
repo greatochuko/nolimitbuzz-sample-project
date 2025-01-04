@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 export default function AppLayout() {
   const { pathname } = useLocation();
@@ -9,17 +9,17 @@ export default function AppLayout() {
         <nav>
           <ul>
             <li>
-              <a href="/" className={pathname === "/" ? "active" : ""}>
+              <Link to="/" className={pathname === "/" ? "active" : ""}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className={pathname === "/about" ? "active" : ""}
               >
                 About
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

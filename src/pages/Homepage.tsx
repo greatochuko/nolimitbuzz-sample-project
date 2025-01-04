@@ -2,10 +2,17 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Homepage.module.css";
 import { Link } from "react-router-dom";
 
-type UserType = {
+export type UserType = {
   id: number;
   name: string;
   email: string;
+  firstname: string;
+  lastname: string;
+  birthDate: string;
+  phone: string;
+  website: string;
+  company: { name: string };
+  address: { suite: string; street: string; city: string };
 };
 
 export default function Homepage() {
@@ -16,9 +23,13 @@ export default function Homepage() {
   useEffect(() => {
     async function fetchUsers() {
       setLoading(true);
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
-      const data = await res.json();
-      setUsers(data);
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        const data = await res.json();
+        setUsers(data);
+      } catch (error) {
+        console.log((error as Error).message);
+      }
       setLoading(false);
     }
 

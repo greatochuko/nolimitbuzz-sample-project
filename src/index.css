@@ -30,6 +30,10 @@ main {
   flex-direction: column;
 }
 
+.app-layout header {
+  margin-bottom: 1rem;
+}
+
 .app-layout header nav ul {
   display: flex;
   justify-content: center;

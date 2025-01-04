@@ -30,7 +30,6 @@
 .user-list {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #dedede;
 }
 
 .user-list-item {
@@ -38,6 +37,30 @@
   align-items: center;
   padding: 0.5rem;
   border-top: 1px solid #dedede;
+}
+
+.user-list-item:last-child {
+  border-bottom: 1px solid #dedede;
+}
+
+.user-list-item-placeholder {
+  background-color: #ddd;
+  margin-bottom: 4px;
+  height: 3rem;
+  border-radius: 0.5rem;
+  animation: pulse 1000ms infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 .user-list-item-content {

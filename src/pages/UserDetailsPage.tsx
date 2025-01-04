@@ -9,11 +9,15 @@ export default function UserDetailsPage() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<UserType | null>(null);
 
+  console.log(user);
+
   useEffect(() => {
     async function fetchUser() {
       setLoading(true);
       try {
-        const res = await fetch(`https://jsonplaceholder.org/users/${userId}`);
+        const res = await fetch(
+          `https://jsonplaceholder.typicode.com/users/${userId}`
+        );
         const data = await res.json();
         setUser(data);
       } catch (error) {
@@ -31,14 +35,9 @@ export default function UserDetailsPage() {
         <div className={styles["loading"]}>Loading...</div>
       ) : user ? (
         <>
-          <h1>
-            {user.firstname} {user.lastname}
-          </h1>
+          <h1>{user.name}</h1>
           <p className={styles["user-detail"]}>
-            <strong>Firstname:</strong> {user.firstname}
-          </p>
-          <p className={styles["user-detail"]}>
-            <strong>Lastname:</strong> {user.lastname}
+            <strong>Fullname:</strong> {user.name}
           </p>
           <p className={styles["user-detail"]}>
             <strong>Email:</strong> {user.email}
@@ -46,9 +45,6 @@ export default function UserDetailsPage() {
           <p className={styles["user-detail"]}>
             <strong>Address:</strong> {user.address.suite},{" "}
             {user.address.street}, {user.address.city}
-          </p>
-          <p className={styles["user-detail"]}>
-            <strong>Date of birth:</strong> {user.birthDate}
           </p>
           <p className={styles["user-detail"]}>
             <strong>Phone:</strong> {user.phone}

@@ -6,8 +6,6 @@ export type UserType = {
   id: number;
   name: string;
   email: string;
-  firstname: string;
-  lastname: string;
   birthDate: string;
   phone: string;
   website: string;

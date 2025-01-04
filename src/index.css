@@ -32,6 +32,7 @@ main {
 
 .app-layout header {
   margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .app-layout header nav ul {
@@ -77,10 +78,4 @@ footer p {
 
 footer p span {
   color: red;
-}
-
-@media screen and (max-width: 640px) {
-  main {
-    width: 95%;
-  }
 }
